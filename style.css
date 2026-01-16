@@ -1,0 +1,113 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:black;
+  color:white;
+  overflow:hidden;
+  font-family:'Poppins',sans-serif;
+}
+
+/* MOVING BACKGROUND */
+.bg-animation{
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 20%, #ff66cc, transparent 40%),
+    radial-gradient(circle at 80% 30%, #00ffff, transparent 40%),
+    radial-gradient(circle at 50% 80%, #b100ff, transparent 45%);
+  animation:bgMove 14s linear infinite alternate;
+  z-index:-2;
+}
+
+@keyframes bgMove{
+  from{filter:hue-rotate(0deg);}
+  to{filter:hue-rotate(360deg);}
+}
+
+.page{
+  display:none;
+  min-height:100vh;
+  padding:60px 20px;
+  text-align:center;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+
+.page.active{display:flex;}
+
+/* NAME */
+.name{
+  font-family:'Great Vibes',cursive;
+  font-size:100px;
+  background:linear-gradient(90deg,#fff,#ffb6ff,#7fffff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* HEADING */
+.heading{
+  margin-top:15px;
+  font-size:30px;
+  font-family:'Dancing Script',cursive;
+  color:#ffd6ff;
+  text-shadow:0 0 20px pink,0 0 40px violet;
+}
+
+/* TEXT */
+.fancy{
+  font-family:'Dancing Script',cursive;
+  font-size:26px;
+  margin-top:20px;
+  max-width:850px;
+  background:linear-gradient(90deg,#ffd1dc,#fff,#b5ffff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.poem{
+  font-family:'Great Vibes',cursive;
+  font-size:32px;
+  background:linear-gradient(90deg,#ffc0cb,#fff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* CASE */
+.case{
+  background:rgba(255,255,255,0.18);
+  padding:35px;
+  border-radius:30px;
+  box-shadow:0 0 40px violet;
+}
+
+.sign{margin-top:15px;color:pink;}
+
+/* BUTTONS */
+button{
+  margin-top:30px;
+  padding:14px 40px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  background:linear-gradient(45deg,#ff69b4,#c77dff);
+  box-shadow:0 0 25px pink;
+}
+
+/* RAINBOW */
+.rainbow{
+  font-size:65px;
+  background:linear-gradient(90deg,red,orange,yellow,green,cyan,violet);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* SPRINKLES */
+#effects span{
+  position:absolute;
+  pointer-events:none;
+}
